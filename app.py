@@ -5,7 +5,7 @@ app = Flask(__name__)
   
 # Connect to the database
 conn = psycopg2.connect(database="flask_db", user="postgres",
-                        password="Roseberry7", host="localhost", port="5432")
+                        password="password", host="localhost", port="5432")
   
 # create a cursor
 cur = conn.cursor()
@@ -34,7 +34,7 @@ def index():
     # Connect to the database
     conn = psycopg2.connect(database="flask_db",
                             user="postgres",
-                            password="Roseberry7",
+                            password="password",
                             host="localhost", port="5432")
   
     # create a cursor
@@ -57,7 +57,7 @@ def index():
 def create():
     conn = psycopg2.connect(database="flask_db",
                             user="postgres",
-                            password="Roseberry7",
+                            password="password",
                             host="localhost", port="5432")
   
     cur = conn.cursor()
@@ -86,7 +86,7 @@ def create():
 def update():
     conn = psycopg2.connect(database="flask_db",
                             user="postgres",
-                            password="Roseberry7",
+                            password="password",
                             host="localhost", port="5432")
   
     cur = conn.cursor()
@@ -109,7 +109,7 @@ def update():
 @app.route('/delete', methods=['POST'])
 def delete():
     conn = psycopg2.connect(database="flask_db", user="postgres",
-     password="Roseberry7",
+     password="password",
      host="localhost", port="5432")
     cur = conn.cursor()
   
